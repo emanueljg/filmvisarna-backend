@@ -11,3 +11,6 @@ def hello_world():
 def header_title():
     return "IRONBOY THINGAMAJIGS"
 
+
+if __name__ == '__main__':
+    create_app().run(port=5000, debug=True)
