@@ -1,0 +1,1026 @@
+[
+  {
+    "title": "Spider-Man: Across the Spider-Verse",
+    "productionCountries": "USA",
+    "release": 2023,
+    "rated": "PG",
+    "length": "N/A",
+    "genre": [
+      "Animerad",
+      "Action",
+      "Äventyr"
+    ],
+    "language": "Engelska",
+    "subtitles": "Svenska",
+    "director": [
+      "Joaquim Dos Santos",
+      "Kemp Powers",
+      "Justin K. Thompson"
+    ],
+    "stars": "N/A",
+    "actors": [
+      "Shameik Moore",
+      "Hailee Steinfeld",
+      "Oscar Isaac",
+      "Jake Johnson"
+    ],
+    "viewings": [],
+    "description": "<p>Miles, Gwen, Peter B. Och fler spindlar måste arbeta sida vid sida för att stoppa Spot, en skurk med portaler på kroppen.</p>",
+    "images": [
+      "across-the-spider-verse-poster.jpg"
+    ]
+  },
+  {
+    "title": "Fight Club",
+    "productionCountries": "USA",
+    "release": 1999,
+    "rated": "R",
+    "length": "2h 19m",
+    "genre": [
+      "Drama"
+    ],
+    "language": "Engelska",
+    "subtitles": "Svenska",
+    "director": "David Fincher",
+    "stars": 8.8,
+    "actors": [
+      "Brad Pitt",
+      "Edward Norton",
+      "Meat Loaf",
+      "Zach Grenier"
+    ],
+    "description": "<p>En sömnlös kontorsarbetare och en tvåltillverkare bildar en underjordisk kampklubb som utvecklas till mycket mer.</p>",
+    "images": [
+      "fight-club-poster.jpg"
+    ],
+    "viewings": [
+      {
+        "start_date": "2023-01-03T13:30:00",
+        "end_date": "2023-01-03T16:04:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-02-13T18:30:00",
+        "end_date": "2023-02-13T21:04:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-04-20T13:00:00",
+        "end_date": "2023-04-20T15:34:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-04-20T22:00:00",
+        "end_date": "2023-04-21T00:34:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-06-08T15:15:00",
+        "end_date": "2023-06-08T17:49:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-07-02T15:00:00",
+        "end_date": "2023-07-02T17:34:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-07-15T21:15:00",
+        "end_date": "2023-07-15T23:49:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-08-12T20:30:00",
+        "end_date": "2023-08-12T23:04:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-08-31T22:00:00",
+        "end_date": "2023-09-01T00:34:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-10-11T11:00:00",
+        "end_date": "2023-10-11T13:34:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-10-22T19:30:00",
+        "end_date": "2023-10-22T22:04:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-10-25T22:00:00",
+        "end_date": "2023-10-26T00:34:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-12-03T13:15:00",
+        "end_date": "2023-12-03T15:49:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-12-15T11:45:00",
+        "end_date": "2023-12-15T14:19:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-12-20T17:30:00",
+        "end_date": "2023-12-20T20:04:00",
+        "room": 1
+      }
+    ]
+  },
+  {
+    "title": "Enter the Dragon",
+    "productionCountries": "Hong Kong",
+    "release": 1973,
+    "rated": "R",
+    "length": "1h 42m",
+    "genre": [
+      "Action",
+      "Brott",
+      "Drama"
+    ],
+    "language": "Engelska",
+    "subtitles": "Svenska",
+    "director": "Robert Clouse",
+    "stars": 7.6,
+    "actors": [
+      "Bruce Lee",
+      "John Saxon",
+      "Jim Kelly"
+    ],
+    "description": "<p>En kampsportare från Shaolin reser till en fästning på ön för att spionera på en opiumherre - som också är en före detta munk från sitt tempel - under sken av att delta i en kampturnering.</p>",
+    "images": [
+      "enter-the-dragon-poster.jpg"
+    ],
+    "viewings": [
+      {
+        "start_date": "2023-01-07T21:30:00",
+        "end_date": "2023-01-07T23:27:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-01-30T22:15:00",
+        "end_date": "2023-01-31T00:12:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-02-11T16:45:00",
+        "end_date": "2023-02-11T18:42:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-03-11T15:30:00",
+        "end_date": "2023-03-11T17:27:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-05-05T20:00:00",
+        "end_date": "2023-05-05T21:57:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-05-21T16:15:00",
+        "end_date": "2023-05-21T18:12:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-05-24T11:00:00",
+        "end_date": "2023-05-24T12:57:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-05-25T21:00:00",
+        "end_date": "2023-05-25T22:57:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-06-06T10:30:00",
+        "end_date": "2023-06-06T12:27:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-06-19T15:15:00",
+        "end_date": "2023-06-19T17:12:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-06-21T11:15:00",
+        "end_date": "2023-06-21T13:12:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-06-27T13:30:00",
+        "end_date": "2023-06-27T15:27:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-08-20T18:30:00",
+        "end_date": "2023-08-20T20:27:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-09-03T20:00:00",
+        "end_date": "2023-09-03T21:57:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-11-20T14:45:00",
+        "end_date": "2023-11-20T16:42:00",
+        "room": 1
+      }
+    ]
+  },
+  {
+    "title": "Red Notice",
+    "productionCountries": "USA",
+    "release": 2021,
+    "rated": "PG-13",
+    "length": "1h 58m",
+    "genre": [
+      "Action",
+      "Komedi",
+      "Thriller"
+    ],
+    "language": "Engelska",
+    "subtitles": "Svenska",
+    "director": "Rawson Marshall Thurber",
+    "stars": 6.3,
+    "actors": [
+      "Dwayne Johnson",
+      "Ryan Reynolds",
+      "Gal Gadot",
+      "Ritu Arya",
+      "Chris Diamantopoulos"
+    ],
+    "description": "<p>En Interpol-agent lyckas spåra upp världens mest eftersökta konsttjuv, med hjälp av en rivaliserande tjuv. Men ingenting är som det verkar, eftersom en serie dubbelkorsningar uppstår.</p>",
+    "images": [
+      "red-notice-poster.jpg"
+    ],
+    "viewings": [
+      {
+        "start_date": "2023-01-23T15:45:00",
+        "end_date": "2023-01-23T17:58:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-01-31T11:30:00",
+        "end_date": "2023-01-31T13:43:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-02-23T20:00:00",
+        "end_date": "2023-02-23T22:13:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-05-12T15:00:00",
+        "end_date": "2023-05-12T17:13:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-05-30T10:45:00",
+        "end_date": "2023-05-30T12:58:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-06-21T20:45:00",
+        "end_date": "2023-06-21T22:58:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-08-24T18:45:00",
+        "end_date": "2023-08-24T20:58:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-09-24T19:00:00",
+        "end_date": "2023-09-24T21:13:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-10-13T19:15:00",
+        "end_date": "2023-10-13T21:28:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-10-28T15:15:00",
+        "end_date": "2023-10-28T17:28:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-11-08T14:15:00",
+        "end_date": "2023-11-08T16:28:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-12-09T14:30:00",
+        "end_date": "2023-12-09T16:43:00",
+        "room": 1
+      }
+    ]
+  },
+  {
+    "title": "Up",
+    "productionCountries": "USA",
+    "release": 2009,
+    "rated": "PG",
+    "length": "1h 36m",
+    "genre": [
+      "Animerad",
+      "Komedi",
+      "Äventyr"
+    ],
+    "language": "Svenska",
+    "director": [
+      "Pete Docter",
+      "Bob Peterson"
+    ],
+    "stars": 8.3,
+    "actors": [
+      "Edward Asner",
+      "Jordan Nagai",
+      "John Ratzenberger",
+      "Christopher Plummer"
+    ],
+    "description": "<p>78-årige Carl Fredricksen reser till Paradise Falls i sitt hus utrustat med ballonger och tar oavsiktligt med sig en ung fripassagerare.<p>",
+    "images": [
+      "up-poster.jpg"
+    ],
+    "viewings": [
+      {
+        "start_date": "2023-01-10T15:15:00",
+        "end_date": "2023-01-10T17:06:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-04-14T22:15:00",
+        "end_date": "2023-04-15T00:06:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-05-31T11:15:00",
+        "end_date": "2023-05-31T13:06:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-07-02T14:00:00",
+        "end_date": "2023-07-02T15:51:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-07-29T18:30:00",
+        "end_date": "2023-07-29T20:21:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-09-01T21:30:00",
+        "end_date": "2023-09-01T23:21:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-09-29T11:30:00",
+        "end_date": "2023-09-29T13:21:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-10-10T22:30:00",
+        "end_date": "2023-10-11T00:21:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-11-25T10:30:00",
+        "end_date": "2023-11-25T12:21:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-11-25T12:00:00",
+        "end_date": "2023-11-25T13:51:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-12-07T20:30:00",
+        "end_date": "2023-12-07T22:21:00",
+        "room": 2
+      }
+    ]
+  },
+  {
+    "title": "Spirited Away",
+    "productionCountries": "Japan",
+    "release": 2001,
+    "rated": "PG",
+    "length": "2h 5m",
+    "genre": [
+      "Tecknad",
+      "Äventyr",
+      "Familj"
+    ],
+    "language": "Engelska",
+    "subtitles": "Svenska",
+    "director": "Hayao Miyazaki",
+    "stars": 8.6,
+    "actors": [
+      "Daveigh Chase",
+      "Suzanne Pleshette",
+      "Miyu Irino"
+    ],
+    "description": "<p>Under familjens flytt till förorten vandrar en surmulen 10-årig flicka in i en värld som styrs av gudar, häxor och andar, och där människor förvandlas till odjur.</p>",
+    "images": [
+      "spirited-away-poster.jpg"
+    ],
+    "viewings": [
+      {
+        "start_date": "2023-01-16T14:30:00",
+        "end_date": "2023-01-16T16:50:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-01-18T18:15:00",
+        "end_date": "2023-01-18T20:35:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-01-19T21:15:00",
+        "end_date": "2023-01-19T23:35:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-02-06T17:45:00",
+        "end_date": "2023-02-06T20:05:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-03-31T22:30:00",
+        "end_date": "2023-04-01T00:50:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-04-04T22:30:00",
+        "end_date": "2023-04-05T00:50:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-04-10T21:45:00",
+        "end_date": "2023-04-11T00:05:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-04-18T11:15:00",
+        "end_date": "2023-04-18T13:35:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-06-29T18:00:00",
+        "end_date": "2023-06-29T20:20:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-08-02T11:45:00",
+        "end_date": "2023-08-02T14:05:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-08-20T14:15:00",
+        "end_date": "2023-08-20T16:35:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-09-13T17:30:00",
+        "end_date": "2023-09-13T19:50:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-09-29T16:15:00",
+        "end_date": "2023-09-29T18:35:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-11-25T14:00:00",
+        "end_date": "2023-11-25T16:20:00",
+        "room": 2
+      }
+    ]
+  },
+  {
+    "title": "The Batman",
+    "productionCountries": "USA",
+    "release": 2022,
+    "rated": "PG 13",
+    "length": "2h 56m",
+    "genre": [
+      "Action",
+      "Brott",
+      "Drama"
+    ],
+    "language": "Engelska",
+    "subtitles": "Svenska",
+    "director": "Matt Reeves",
+    "stars": 7.8,
+    "actors": [
+      "Robert Pattinson",
+      "Zoe Kravitz",
+      "Jeffrey Wright",
+      "Colin Farrel",
+      "Paul Dano",
+      "John Turturro",
+      "Andy Serkis"
+    ],
+    "description": "<p>När en sadistisk seriemördare börjar mörda viktiga politiska personer i Gotham, tvingas Batman undersöka stadens dolda korruption och ifrågasätta hans familjs inblandning.</p>",
+    "images": [
+      "the-batman-poster.jpg"
+    ],
+    "viewings": [
+      {
+        "start_date": "2023-02-03T18:45:00",
+        "end_date": "2023-02-03T21:56:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-02-22T13:45:00",
+        "end_date": "2023-02-22T16:56:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-03-09T10:45:00",
+        "end_date": "2023-03-09T13:56:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-05-14T12:00:00",
+        "end_date": "2023-05-14T15:11:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-08-19T12:30:00",
+        "end_date": "2023-08-19T15:41:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-08-31T15:45:00",
+        "end_date": "2023-08-31T18:56:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-11-10T20:15:00",
+        "end_date": "2023-11-10T23:26:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-11-23T12:15:00",
+        "end_date": "2023-11-23T15:26:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-12-18T14:45:00",
+        "end_date": "2023-12-18T17:56:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-12-26T13:30:00",
+        "end_date": "2023-12-26T16:41:00",
+        "room": 1
+      }
+    ]
+  },
+  {
+    "title": "The Thing",
+    "productionCountries": "USA",
+    "release": 1982,
+    "rated": "R",
+    "length": "1h 49m",
+    "genre": [
+      "Skräck",
+      "Mystisk",
+      "Sci-Fi"
+    ],
+    "language": "Engelska",
+    "subtitles": "Svenska",
+    "director": "Matt Reeves",
+    "stars": 8.2,
+    "actors": [
+      "Kurt Russell",
+      "Wilford Brimley",
+      "Keith David",
+      "Richard Masur",
+      "T.K. Carter",
+      "David Clennon",
+      "Richard Dysart"
+    ],
+    "description": "<p>Ett forskarlag i Antarktis jagas av en formskiftande utomjording som antar utseendet som sina offer.</p>",
+    "images": [
+      "the-thing-poster.jpg"
+    ],
+    "viewings": [
+      {
+        "start_date": "2023-01-02T20:45:00",
+        "end_date": "2023-01-02T22:49:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-01-07T15:00:00",
+        "end_date": "2023-01-07T17:04:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-03-13T20:15:00",
+        "end_date": "2023-03-13T22:19:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-04-04T14:00:00",
+        "end_date": "2023-04-04T16:04:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-06-18T15:45:00",
+        "end_date": "2023-06-18T17:49:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-06-19T11:30:00",
+        "end_date": "2023-06-19T13:34:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-07-17T13:15:00",
+        "end_date": "2023-07-17T15:19:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-08-24T21:00:00",
+        "end_date": "2023-08-24T23:04:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-10-18T18:30:00",
+        "end_date": "2023-10-18T20:34:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-11-08T20:30:00",
+        "end_date": "2023-11-08T22:34:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-12-04T11:00:00",
+        "end_date": "2023-12-04T13:04:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-12-09T15:15:00",
+        "end_date": "2023-12-09T17:19:00",
+        "room": 2
+      }
+    ]
+  },
+  {
+    "title": "Soul",
+    "productionCountries": "USA",
+    "release": 2020,
+    "rated": "PG",
+    "length": "1h 40m",
+    "genre": [
+      "Animerad",
+      "Äventyr",
+      "Komedi"
+    ],
+    "language": "Svenska",
+    "director": [
+      "Peter Docter",
+      "Kemp Powers"
+    ],
+    "stars": 8,
+    "actors": [
+      "Jamie Foxx",
+      "Tina Fey",
+      "Graham Norton",
+      "Rachel House"
+    ],
+    "description": "<p>Efter att ha landat sitt livs spelning, befinner sig en jazzpianist i New York plötsligt instängd i ett främmande land mellan jorden och livet efter detta.</p>",
+    "images": [
+      "soul-poster.jpg"
+    ],
+    "viewings": [
+      {
+        "start_date": "2023-01-14T19:30:00",
+        "end_date": "2023-01-14T21:25:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-03-03T11:45:00",
+        "end_date": "2023-03-03T13:40:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-03-13T15:45:00",
+        "end_date": "2023-03-13T17:40:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-03-24T21:00:00",
+        "end_date": "2023-03-24T22:55:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-04-17T10:30:00",
+        "end_date": "2023-04-17T12:25:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-04-29T19:30:00",
+        "end_date": "2023-04-29T21:25:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-06-05T19:15:00",
+        "end_date": "2023-06-05T21:10:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-06-16T11:00:00",
+        "end_date": "2023-06-16T12:55:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-06-16T14:45:00",
+        "end_date": "2023-06-16T16:40:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-08-05T18:00:00",
+        "end_date": "2023-08-05T19:55:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-08-09T10:30:00",
+        "end_date": "2023-08-09T12:25:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-12-22T22:45:00",
+        "end_date": "2023-12-23T00:40:00",
+        "room": 2
+      }
+    ]
+  },
+  {
+    "title": "The Unbearable Weight of Massive Talent",
+    "productionCountries": "Ungern",
+    "release": 2022,
+    "rated": "R",
+    "length": "1h 47m",
+    "genre": [
+      "Action",
+      "Komedi",
+      "Brott"
+    ],
+    "language": "Engelska",
+    "subtitles": "Svenska",
+    "director": "Tom Gormican",
+    "stars": 7,
+    "actors": [
+      "Nicolas Cage",
+      "Pedro Pascal",
+      "Tiffany Haddish",
+      "Sharon Horgan",
+      "Neil Patrick Harris"
+    ],
+    "description": "<p>I denna actionfyllda komedi spelar Nicolas Cage Nick Cage, och kanaliserar sina ikoniska karaktärer när han hamnar i kontakt mellan en superfan (Pedro Pascal) och en CIA-agent (Tiffany Haddish).</p>",
+    "images": [
+      "the-unbearable-weight-of-massive-talent-poster.jpg"
+    ],
+    "viewings": [
+      {
+        "start_date": "2023-01-02T12:45:00",
+        "end_date": "2023-01-02T14:47:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-01-04T16:15:00",
+        "end_date": "2023-01-04T18:17:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-02-18T17:15:00",
+        "end_date": "2023-02-18T19:17:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-03-20T22:30:00",
+        "end_date": "2023-03-21T00:32:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-03-31T14:30:00",
+        "end_date": "2023-03-31T16:32:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-06-09T22:30:00",
+        "end_date": "2023-06-10T00:32:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-07-03T22:45:00",
+        "end_date": "2023-07-04T00:47:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-07-23T14:00:00",
+        "end_date": "2023-07-23T16:02:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-08-07T11:15:00",
+        "end_date": "2023-08-07T13:17:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-09-18T15:15:00",
+        "end_date": "2023-09-18T17:17:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-09-19T10:00:00",
+        "end_date": "2023-09-19T12:02:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-12-19T10:15:00",
+        "end_date": "2023-12-19T12:17:00",
+        "room": 2
+      }
+    ]
+  },
+  {
+    "title": "Pulp Fiction",
+    "productionCountries": "USA",
+    "release": 1994,
+    "rated": "R",
+    "length": "2h 34m",
+    "genre": [
+      "Brott",
+      "Drama"
+    ],
+    "language": "Engelska",
+    "subtitles": "Svenska",
+    "director": "Quentin Tarantino",
+    "stars": 8.9,
+    "actors": [
+      "John Travolta",
+      "Uma Thurman",
+      "Samuel L. Jackson",
+      "Bruce Willis",
+      "Tim Roth"
+    ],
+    "description": "<p>Livet för två maffiamördare, en boxare, en gangster och hans fru och ett par middagsbanditer flätas samman i fyra berättelser om våld och försoning.</p>",
+    "images": [
+      "pulp-fiction-poster.jpg"
+    ],
+    "viewings": [
+      {
+        "start_date": "2023-01-27T13:45:00",
+        "end_date": "2023-01-27T16:34:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-02-07T17:45:00",
+        "end_date": "2023-02-07T20:34:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-02-21T20:00:00",
+        "end_date": "2023-02-21T22:49:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-03-06T15:45:00",
+        "end_date": "2023-03-06T18:34:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-04-17T20:30:00",
+        "end_date": "2023-04-17T23:19:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-06-03T21:15:00",
+        "end_date": "2023-06-04T00:04:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-07-04T16:00:00",
+        "end_date": "2023-07-04T18:49:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-08-10T12:00:00",
+        "end_date": "2023-08-10T14:49:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-08-26T18:45:00",
+        "end_date": "2023-08-26T21:34:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-09-01T14:00:00",
+        "end_date": "2023-09-01T16:49:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-10-07T13:45:00",
+        "end_date": "2023-10-07T16:34:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-10-08T12:45:00",
+        "end_date": "2023-10-08T15:34:00",
+        "room": 1
+      }
+    ]
+  },
+  {
+    "title": "Doctor Strange in the Multiverse of Madness",
+    "productionCountries": "USA",
+    "release": 2022,
+    "rated": "PG-13",
+    "length": "2h 6m",
+    "genre": [
+      "Action",
+      "Äventyr",
+      "Fantasi"
+    ],
+    "language": "Engelska",
+    "subtitles": "Svenska",
+    "director": "Sam Raimi",
+    "stars": 6.9,
+    "actors": [
+      "Benedict Cumberbatch",
+      "Elizabeth Olsen",
+      "Chiwetel Ejiofor",
+      "Benedict Wong",
+      "Xochitl Gomez",
+      "Rachel McAdams"
+    ],
+    "description": "<p>Doctor Strange slår sig ihop med en mystisk tonårsflicka från sina drömmar som kan resa över multiversum, för att bekämpa flera hot, inklusive andra universums versioner av honom själv, som hotar att utplåna miljoner över multiversum. De söker hjälp från Wanda the Scarlet Witch, Wong och andra.</p>",
+    "images": [
+      "doctor-strange-in-the-multiverse-of-madness-poster.jpg"
+    ],
+    "viewings": [
+      {
+        "start_date": "2023-01-09T22:15:00",
+        "end_date": "2023-01-10T00:36:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-02-08T21:45:00",
+        "end_date": "2023-02-09T00:06:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-02-22T13:45:00",
+        "end_date": "2023-02-22T16:06:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-03-10T17:30:00",
+        "end_date": "2023-03-10T19:51:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-05-11T10:30:00",
+        "end_date": "2023-05-11T12:51:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-07-08T19:45:00",
+        "end_date": "2023-07-08T22:06:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-07-22T21:45:00",
+        "end_date": "2023-07-23T00:06:00",
+        "room": 2
+      },
+      {
+        "start_date": "2023-11-13T13:45:00",
+        "end_date": "2023-11-13T16:06:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-12-05T10:15:00",
+        "end_date": "2023-12-05T12:36:00",
+        "room": 1
+      },
+      {
+        "start_date": "2023-12-18T21:30:00",
+        "end_date": "2023-12-18T23:51:00",
+        "room": 2
+      }
+    ]
+  }
+]
