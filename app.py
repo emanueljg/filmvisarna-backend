@@ -10,3 +10,5 @@ def hello_world():
 @app.route("/api/header-title")
 def header_title():
     return "IRONBOY THINGAMAJIGS"
+
+print(app.__dict__)
