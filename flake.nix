@@ -86,6 +86,18 @@
                   }
                 ];
               };
+
+              systemd.services."${name}-flask" = {
+                after = [ "network.target" ];
+                path = [ pkg ];
+                wantedBy = [ "multi-user.target" ];
+                serviceConfig = {
+                  User = "ejg";
+                  Group = "users";
+                  Type = "simple";
+                  ExecStart="${pkg}/bin/app.py";
+                };
+              };
             };
           }
         );

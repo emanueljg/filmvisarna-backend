@@ -11,4 +11,3 @@ def hello_world():
 def header_title():
     return "IRONBOY THINGAMAJIGS"
 
-print(app.__dict__)
