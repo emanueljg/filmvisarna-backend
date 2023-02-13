@@ -54,6 +54,7 @@
             config = let 
               inherit (lib.attrsets) genAttrs;
             in mkIf cfg.enable {
+              networking.firewall.allowedTCPPorts = [ 5000 ];
               # since we are using unix socket auth,
               # we need to add corresponding OS users.
               users.users = genAttrs users (
