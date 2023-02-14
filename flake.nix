@@ -88,7 +88,8 @@
                 ];
               };
 
-              systemd.tmpfiles.rules = [ "d '/var/lib/filmvisarna-backend' 0750 ejg users -" ];
+              systemd.tmpfiles.rules = [ "d '/var/lib/filmvisarna-backend' 0750 ejg users -" 
+                                         "L+ '/var/lib/filmvisarna-backend/filmvisarna-backend.py' '${pkg}/bin/filmvisarna-backend.py'"];
 
               systemd.services."${name}-flask" = let
                 gunicorn = pkgs.python3Packages.gunicorn;
@@ -102,7 +103,6 @@
                   User = "ejg";
                   Group = "users";
                   Type = "simple";
-                  ExecStartPre="${pkgs.coreutils}/bin/ln -sf ${pkg}/bin/filmvisarna-backend.py ${wd}/filmvisarna-backend.py";
                   ExecStart="${gunicorn}/bin/gunicorn -w 4 --chdir ${wd} 'filmvisarna-backend:app'";
                   WorkingDirectory = wd;
                 };
