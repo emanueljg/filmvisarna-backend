@@ -223,7 +223,7 @@ CREATE TABLE viewing (
 
 DROP TABLE IF EXISTS ticket;
 CREATE TABLE ticket (
-    id int NOT NULL,
+    id int NOT NULL AUTO_INCREMENT KEY,
     name varchar(20) NOT NULL,
     price decimal NOT NULL,
 
@@ -237,7 +237,7 @@ CREATE TABLE booking (
     email varchar(100) NOT NULL,
     ticket int NOT NULL,
 
-    FOREIGN KEY (ticket) REFERENCES ticker(id)
+    FOREIGN KEY (ticket) REFERENCES ticket(id)
     -- don't think there is a possible unique constraint here
 );
 
@@ -248,8 +248,74 @@ CREATE TABLE booked_seat (
     seat int NOT NULL,
 
     FOREIGN KEY (booking) REFERENCES booking(id),
-    FOREIGN KEY (seat) REFERENCES seat(id)
+    FOREIGN KEY (seat) REFERENCES seat(id),
+
+    UNIQUE(booking, seat)
 );
+
+DROP VIEW IF EXISTS viewingXseat;
+CREATE VIEW viewingXseat AS
+SELECT 
+    viewing.id AS "viewing", 
+    seat.id AS "seat"
+FROM
+    viewing
+INNER JOIN
+    theatre 
+ON
+    theatre.id = viewing.theatre
+INNER JOIN
+    seat
+ON
+    seat.theatre = theatre.id;
+
+DROP VIEW IF EXISTS booked_viewingXseat;
+CREATE VIEW booked_viewingXseat AS 
+SELECT 
+    viewing.id AS "viewing", 
+    seat.id AS "seat"
+FROM 
+    booked_seat 
+INNER JOIN 
+    booking 
+ON 
+    booking.id = booked_seat.booking
+INNER JOIN 
+    viewing 
+ON
+    viewing.id = booking.viewing
+INNER JOIN 
+    theatre
+ON
+    theatre.id = viewing.theatre
+INNER JOIN 
+    seat 
+ON
+    seat.id = booked_seat.id;
+
+DROP VIEW IF EXISTS vacant_viewingXseat;
+CREATE VIEW vacant_viewingXseat AS
+SELECT
+    *
+FROM
+    viewingXseat
+WHERE NOT EXISTS (
+    SELECT 
+        *
+    FROM
+        booked_viewingXseat
+    WHERE
+        viewingXseat.viewing
+            =
+        booked_viewingXseat.viewing
+        AND
+        viewingXseat.seat 
+            =
+        booked_viewingXseat.seat
+    LIMIT 1
+);
+
+
 
 SET FOREIGN_KEY_CHECKS=1;
 

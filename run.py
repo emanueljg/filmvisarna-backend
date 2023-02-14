@@ -1,7 +1,15 @@
+"""json -> mysql migration script turned DB seeder.
+
+The code written here is awful. It was written as quickly as possible
+in order to get the backend initially up and running.
+"""
+
+
 #!/usr/bin/env python3 
 import pymysql
 import json
 import os
+import random
 from collections import OrderedDict
 
 def get_conn():
@@ -114,8 +122,37 @@ with get_conn() as conn, conn.cursor() as c:
             args = to_args(movie_id, theatre, starts, ends)
             doq(c, f"INSERT INTO viewing (movie, theatre, starts, ends)" + args)
 
-        for t 
+    tickets = {
+        'ordinarie': 150,
+        'senior': 100,
+        'barn': 50
+    }
+    for ticket_name, price in tickets.items():
+        doq(c, f"INSERT INTO ticket (name, price)" + to_args(ticket_name, price))
+
+    # since viewings are done we can now do bookings! Neat.
+    doq(c, f"SELECT * FROM viewing")
+    viewings = c.fetchall()
+
+    bookings = load_json('bookings.json')
 
 
-        
+    for booking in bookings:
+        email = booking['email']
+        ticket = booking['ticket']
+        # get vacant viewings
+        doq(c, f"SELECT * FROM vacant_viewingXseat")
+        # choose one
+        rand = random.choice(c.fetchall())
+        viewing, seat = rand['viewing'], rand['seat']
+        args1 = to_args(viewing, email, ticket)
+        # make the booking
+        booking_id = None
+        c.execute(f"INSERT INTO booking (viewing, email, ticket)" + args1)
+        # this should work... i think?
+        doq(c, 'SELECT LAST_INSERT_ID()') 
+        booking_id = c.fetchone()['LAST_INSERT_ID()']
+        args2 = to_args(booking_id, seat)
+        # add the seat too
+        c.execute(f"INSERT INTO booked_seat (booking, seat)" + args2)
 
