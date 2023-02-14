@@ -89,7 +89,7 @@
               };
 
               systemd.tmpfiles.rules = [ "d '/var/lib/filmvisarna-backend' 0750 ejg users -" 
-                                         "L+ '/var/lib/filmvisarna-backend/filmvisarna-backend.py' '${pkg}/bin/filmvisarna-backend.py'"];
+                                         "L+ '/var/lib/filmvisarna-backend/filmvisarna-backend.py' - - - - '${pkg}/bin/filmvisarna-backend.py'"];
 
               systemd.services."${name}-flask" = let
                 gunicorn = pkgs.python3Packages.gunicorn;
