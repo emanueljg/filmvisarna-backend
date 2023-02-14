@@ -104,7 +104,7 @@
                   User = "ejg";
                   Group = "users";
                   Type = "simple";
-                  ExecStart="${gunicorn}/bin/gunicorn -w 4 --chdir ${wd} 'filmvisarna-backend:app'";
+                  ExecStart="${gunicorn}/bin/gunicorn -w 4 -b 0.0.0.0 --chdir ${wd} 'filmvisarna-backend:app'";
                   WorkingDirectory = wd;
                 };
               };
