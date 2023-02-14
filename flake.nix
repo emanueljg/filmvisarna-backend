@@ -58,6 +58,7 @@
 
               # blegh..
               security.acme.acceptTerms = true;
+              security.acme.defaults.email = "emanueljohnsongodin@gmail.com";
               
               services.nginx = {
                 enable = true;
