@@ -81,7 +81,7 @@
 
 
 
-              networking.firewall.allowedTCPPorts = [ 80 ];
+              networking.firewall.allowedTCPPorts = [ 80 8000 ];
               # since we are using unix socket auth,
               # we need to add corresponding OS users.
               users.users = genAttrs users (
