@@ -95,16 +95,14 @@
                 path = [ pkg gunicorn pkgs.coreutils ];
                 wantedBy = [ "multi-user.target" ];
                 serviceConfig = let
-                  wd = "/run/filmvisarna-backend";
+                  wd = "/var/lib/filmvisarna-backend";
                 in {
                   User = "ejg";
                   Group = "users";
                   Type = "simple";
                   ExecStartPre="${pkgs.coreutils}/bin/ln -sf ${pkg}/bin/filmvisarna-backend.py ${wd}/filmvisarna-backend.py";
                   ExecStart="${gunicorn}/bin/gunicorn -w 4 'filmvisarna-backend:app'";
-                  RuntimeDirectory = "filmvisarna-backend";
                   WorkingDirectory = wd;
-                  RuntimeDirectoryMode = 755;
                 };
               };
             };
