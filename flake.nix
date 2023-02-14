@@ -17,7 +17,7 @@
           flask
           pymysql
         ; 
-      in buildPythonApplication {
+      in buildPythonPackage {
         pname = name;
         version = "0.2";
         propagatedBuildInputs = [ flask pymysql ];
