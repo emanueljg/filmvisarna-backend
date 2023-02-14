@@ -55,6 +55,9 @@
             config = let 
               inherit (lib.attrsets) genAttrs;
             in mkIf cfg.enable {
+
+              # blegh..
+              security.acme.acceptTerms = true;
               
               services.nginx = {
                 enable = true;
