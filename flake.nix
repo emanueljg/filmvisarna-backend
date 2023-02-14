@@ -103,7 +103,7 @@
                   Group = "users";
                   Type = "simple";
                   ExecStartPre="${pkgs.coreutils}/bin/ln -sf ${pkg}/bin/filmvisarna-backend.py ${wd}/filmvisarna-backend.py";
-                  ExecStart="${gunicorn}/bin/gunicorn -w 4 'filmvisarna-backend:app'";
+                  ExecStart="${gunicorn}/bin/gunicorn -w 4 --chdir ${wd} 'filmvisarna-backend:app'";
                   WorkingDirectory = wd;
                 };
               };
