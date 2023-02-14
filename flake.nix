@@ -55,7 +55,29 @@
             config = let 
               inherit (lib.attrsets) genAttrs;
             in mkIf cfg.enable {
-              networking.firewall.allowedTCPPorts = [ 8000 ];
+              
+              services.nginx = {
+                enable = true;
+                virtualHosts."emanueljg.com" = {
+                  forceSSL = true;
+                  enableACME = true;
+                  root = "/var/lib/filmvisarna-backend";
+                  locations."/" = {
+                    proxyPass = "http://127.0.0.1:8000";
+                    recommendedProxySettings = true;
+                    extraConfig = ''
+                      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+                      proxy_set_header X-Forwarded-Proto $scheme;
+                      proxy_set_header X-Forwarded-Host $host;
+                      proxy_set_header X-Forwarded-Prefix /;
+                    '';
+                  };
+                };
+              };
+
+
+
+              networking.firewall.allowedTCPPorts = [ 80 ];
               # since we are using unix socket auth,
               # we need to add corresponding OS users.
               users.users = genAttrs users (
@@ -104,7 +126,7 @@
                   User = "ejg";
                   Group = "users";
                   Type = "simple";
-                  ExecStart="${gunicorn}/bin/gunicorn -w 4 -b 0.0.0.0 --chdir ${wd} 'filmvisarna-backend:app'";
+                  ExecStart="${gunicorn}/bin/gunicorn -w 4 --chdir ${wd} 'filmvisarna-backend:app'";
                   WorkingDirectory = wd;
                 };
               };
