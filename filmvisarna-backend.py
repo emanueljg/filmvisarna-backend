@@ -20,6 +20,7 @@ def header_title():
 
 
 if __name__ == '__main__':
+    pass
     # use_reloader=False should fix the systemd
     # service quitting (don't ask me why...)
-    app.run(host='0.0.0.0', port=5000, debug=True, use_reloader=False)
+ #   app.run(host='0.0.0.0', port=5000, debug=True, use_reloader=False)
