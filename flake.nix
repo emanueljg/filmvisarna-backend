@@ -92,7 +92,7 @@
                 gunicorn = pkgs.python3Packages.gunicorn;
               in {
                 after = [ "network.target" ];
-                path = [ pkg gunicorn ];
+                path = [ pkg gunicorn pkgs.coreutils ];
                 wantedBy = [ "multi-user.target" ];
                 serviceConfig = let
                   wd = "/run/filmvisarna-backend";
@@ -100,7 +100,7 @@
                   User = "ejg";
                   Group = "users";
                   Type = "simple";
-                  ExecStartPre="ln -sf ${pkg}/bin/filmvisarna-backend.py ${wd}/filmvisarna-backend.py";
+                  ExecStartPre="${pkgs.coreutils}/bin/ln -sf ${pkg}/bin/filmvisarna-backend.py ${wd}/filmvisarna-backend.py";
                   ExecStart="${gunicorn}/bin/gunicorn -w 4 'filmvisarna-backend:app'";
                   RuntimeDirectory = "filmvisarna-backend";
                   WorkingDirectory = wd;
