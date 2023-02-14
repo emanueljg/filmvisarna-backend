@@ -30,7 +30,7 @@
 
       apps.default = {
         type = "app";
-        program = "${self.packages.${system}.default}/bin/app.py";
+        program = "${self.packages.${system}.default}/bin/${name}.py";
       };
     }) // (let name = "filmvisarna"; in { 
     # now we add on non-system-specific stuff
@@ -88,15 +88,23 @@
                 ];
               };
 
-              systemd.services."${name}-flask" = {
+              systemd.services."${name}-flask" = let
+                gunicorn = pkgs.python3Packages.gunicorn;
+              in {
                 after = [ "network.target" ];
-                path = [ pkg ];
+                path = [ pkg gunicorn ];
                 wantedBy = [ "multi-user.target" ];
-                serviceConfig = {
+                serviceConfig = let
+                  wd = "/run/filmvisarna-backend";
+                in {
                   User = "ejg";
                   Group = "users";
                   Type = "simple";
-                  ExecStart="${pkg}/bin/app.py";
+                  ExecStartPre="ln -sf ${pkg}/bin/filmvisarna-backend.py ${wd}/filmvisarna-backend.py";
+                  ExecStart="${gunicorn}/bin/gunicorn -w 4 'filmvisarna-backend:app'";
+                  RuntimeDirectory = "filmvisarna-backend";
+                  WorkingDirectory = wd;
+                  RuntimeDirectoryMode = 755;
                 };
               };
             };
