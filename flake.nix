@@ -19,7 +19,7 @@
         ; 
       in buildPythonApplication {
         pname = name;
-        version = "0.1";
+        version = "0.2";
         propagatedBuildInputs = [ flask pymysql ];
         src = ./.;
       };
