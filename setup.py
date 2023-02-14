@@ -2,9 +2,9 @@
 
 from setuptools import setup, find_packages
 
-setup(name='filmvisarna-flask',
+setup(name='filmvisarna-backend',
       version='1.0',
       # Modules to import from other scripts:
       packages=find_packages(),
       # Executables
-      scripts=["app.py"])
+      scripts=['filmvisarna-backend.py'])
