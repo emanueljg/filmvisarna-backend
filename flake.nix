@@ -88,6 +88,8 @@
                 ];
               };
 
+              tmpfiles.rules = [ "d '/var/lib/filmvisarna-backend' 0750 ejg users -" ];
+
               systemd.services."${name}-flask" = let
                 gunicorn = pkgs.python3Packages.gunicorn;
               in {
