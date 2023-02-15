@@ -41,7 +41,6 @@
             cfg = config.services.${name}; 
             pkg = self.packages.${pkgs.system}.default;
           in {
-
             options.services.${name} = {
               enable = mkEnableOption self.description;
             };
@@ -75,7 +74,7 @@
 
 
 
-              networking.firewall.allowedTCPPorts = [ 80 8000 443 ];
+              networking.firewall.allowedTCPPorts = [ 443 ];
               # since we are using unix socket auth,
               # we need to add corresponding OS users.
               users.users = genAttrs users (
