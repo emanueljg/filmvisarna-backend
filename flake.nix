@@ -127,14 +127,12 @@
                 after = [ "network.target" ];
                 path = [ pkg gunicorn ];
                 wantedBy = [ "multi-user.target" ];
-                serviceConfig = let
-                  wd = "/var/lib/filmvisarna-backend";
-                in {
+                serviceConfig = {
                   User = "ejg";
                   Group = "users";
                   Type = "simple";
-                  ExecStart="${gunicorn}/bin/gunicorn -w 4 --chdir ${wd} 'filmvisarna-backend:app'";
-                  WorkingDirectory = wd;
+                  ExecStart="${gunicorn}/bin/gunicorn -w 4 --chdir ${cfg.dirPath} 'filmvisarna-backend:app'";
+                  WorkingDirectory = cfg.dirPath;
                 };
               };
             };
