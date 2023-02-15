@@ -53,6 +53,7 @@
                   This is necessary since the WSGI web server (gunicorn) 
                   needs to be run in the same directory as the flask module.
                 '';
+              };
             };
 
             config = let 
