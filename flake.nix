@@ -125,7 +125,7 @@
                 gunicorn = pkgs.python3Packages.gunicorn;
               in {
                 after = [ "network.target" ];
-                path = [ pkg gunicorn ];
+                path = [ gunicorn ];
                 wantedBy = [ "multi-user.target" ];
                 serviceConfig = {
                   User = "ejg";
