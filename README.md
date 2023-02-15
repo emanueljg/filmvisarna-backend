@@ -1,2 +1,2 @@
 # filmvisarna-backend
-A backend writting in flask + mysql
+A backend written in flask + mysql
