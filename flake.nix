@@ -13,7 +13,6 @@
 
       pkg = let
         inherit (pkgs.python3Packages)
-          buildPythonApplication
           buildPythonPackage
           flask
           pymysql
