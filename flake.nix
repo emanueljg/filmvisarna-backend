@@ -133,8 +133,13 @@
                   User = "ejg";
                   Group = "users";
                   Type = "simple";
-                  ExecStart="${gunicorn}/bin/gunicorn -w 4 --chdir ${cfg.dirPath} 'filmvisarna-backend:app'";
                   WorkingDirectory = cfg.dirPath;
+                  ExecStart=''
+                    ${gunicorn}/bin/gunicorn \
+                      -w 4 \
+                      --chdir ${cfg.dirPath} \
+                      'filmvisarna-backend:app'
+                  '';
                 };
               };
             };
