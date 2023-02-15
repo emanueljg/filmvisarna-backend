@@ -31,7 +31,6 @@
 
       # add module
       nixosModules = let 
-        pkg = self.packages."x86_64-linux".default;
         admin-user = "${name}-admin";
         api-user = "${name}-api";
         users = [ admin-user api-user ];
@@ -39,7 +38,9 @@
         default = self.nixosModules.${name}; 
         ${name} = (
           { config, pkgs, lib, ... }: with lib; let 
-            cfg = config.services.${name}; in {
+            cfg = config.services.${name}; 
+            pkg = self.${pkgs.system}.packages.default;
+          in {
 
             options.services.${name} = {
               enable = mkEnableOption self.description;
