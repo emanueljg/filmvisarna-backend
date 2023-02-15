@@ -26,7 +26,6 @@
     in {
       packages.default = pkg;
       packages.${name} = pkg;
-      };
     }) // (let name = "filmvisarna"; in { 
     # now we add on non-system-specific stuff
 
