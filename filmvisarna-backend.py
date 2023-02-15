@@ -14,7 +14,7 @@ def get_conn():
                            host='localhost',
                            database='filmvisarna',
                            unix_socket='/var/run/mysqld/mysqld.sock',
-                           cursorclass=pmysql.cursors.DictCursor,
+                           cursorclass=pymysql.cursors.DictCursor,
                            autocommit=True)
 
 @app.route("/")
