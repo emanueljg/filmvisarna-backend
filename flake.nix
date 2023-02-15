@@ -26,10 +26,6 @@
     in {
       packages.default = pkg;
       packages.${name} = pkg;
-
-      apps.default = {
-        type = "app";
-        program = "${self.packages.${system}.default}/bin/${name}.py";
       };
     }) // (let name = "filmvisarna"; in { 
     # now we add on non-system-specific stuff
