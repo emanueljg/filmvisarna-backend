@@ -43,6 +43,16 @@
           in {
             options.services.${name} = {
               enable = mkEnableOption self.description;
+              
+              dirPath = mkOption {
+                type = types.str;
+                default = "/var/lib/filmvisarna-backend";
+                description = lib.mdDoc ''
+                  Path to run the flask server in. 
+
+                  This is necessary since the WSGI web server (gunicorn) 
+                  needs to be run in the same directory as the flask module.
+                '';
             };
 
             config = let 
@@ -58,7 +68,7 @@
                 virtualHosts."emanueljg.com" = {
                   forceSSL = true;
                   enableACME = true;
-                  root = "/var/lib/filmvisarna-backend";
+                  root = cfg.dirPath;
                   locations."/" = {
                     proxyPass = "http://127.0.0.1:8000";
                     recommendedProxySettings = true;
@@ -71,8 +81,6 @@
                   };
                 };
               };
-
-
 
               networking.firewall.allowedTCPPorts = [ 443 ];
               # since we are using unix socket auth,
@@ -108,8 +116,9 @@
                 ];
               };
 
-              systemd.tmpfiles.rules = [ "d '/var/lib/filmvisarna-backend' 0750 ejg users -" 
-                                         "L+ '/var/lib/filmvisarna-backend/filmvisarna-backend.py' - - - - ${pkg}/bin/.filmvisarna-backend.py-wrapped"];
+              systemd.tmpfiles.rules = [ 
+                "d '/var/lib/filmvisarna-backend' 0750 ejg users -" 
+                "L+ '/var/lib/filmvisarna-backend/filmvisarna-backend.py' - - - - ${pkg}/bin/.filmvisarna-backend.py-wrapped"];
 
               systemd.services."${name}-flask" = let
                 gunicorn = pkgs.python3Packages.gunicorn;
