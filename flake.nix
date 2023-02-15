@@ -39,7 +39,7 @@
         ${name} = (
           { config, pkgs, lib, ... }: with lib; let 
             cfg = config.services.${name}; 
-            pkg = self.packages.${cfg.system}.default;
+            pkg = self.packages.${pkgs.system}.default;
           in {
 
             options.services.${name} = {
