@@ -119,14 +119,16 @@
 
               systemd.tmpfiles.rules = [ 
                 "d '${cfg.dirPath}' 0750 ejg users -" 
-                "L+ '${cfg.dirPath}/filmvisarna-backend.py' - - - - ${pkg}/bin/.filmvisarna-backend.py-wrapped"];
+                ''L+ '${cfg.dirPath}/filmvisarna-backend.py' \
+                  - - - - ${pkg}/bin/.filmvisarna-backend.py-wrapped''
+              ];
 
               systemd.services."${name}-flask" = let
                 gunicorn = pkgs.python3Packages.gunicorn;
               in {
+                wantedBy = [ "multi-user.target" ];
                 after = [ "network.target" ];
                 path = [ gunicorn ];
-                wantedBy = [ "multi-user.target" ];
                 serviceConfig = {
                   User = "ejg";
                   Group = "users";
