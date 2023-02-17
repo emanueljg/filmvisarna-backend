@@ -68,7 +68,7 @@
                 enable = true;
                 virtualHosts."filmvisarna-backend.emanueljg.com" = {
                   forceSSL = true;
-                  enableACME = false;
+                  enableACME = true;
                   root = cfg.dirPath;
                   locations."/" = {
                     proxyPass = "http://127.0.0.1:8000";
