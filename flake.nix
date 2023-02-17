@@ -128,6 +128,10 @@
 
               systemd.tmpfiles.rules = [ 
                 "d '${cfg.dirPath}' 0750 ejg users -" 
+
+                ("L+ '${cfg.dirPath}/endpoint_maker.py'"
+                 + " - - - - ${pkg}/bin/.endpoint_maker.py-wrapped")
+
                 ("L+ '${cfg.dirPath}/filmvisarna-backend.py'"
                  + " - - - - ${pkg}/bin/.filmvisarna-backend.py-wrapped")
               ];
