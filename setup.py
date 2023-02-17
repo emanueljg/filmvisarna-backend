@@ -7,4 +7,4 @@ setup(name='filmvisarna-backend',
       # Modules to import from other scripts:
       packages=find_packages(),
       # Executables
-      scripts=['filmvisarna-backend.py'])
+      scripts=['filmvisarna-backend.py', 'endpoint_maker.py'])
