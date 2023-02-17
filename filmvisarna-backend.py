@@ -3,6 +3,8 @@ from flask import Flask, current_app, jsonify
 import pymysql
 from werkzeug.middleware.proxy_fix import ProxyFix
 
+from .endpoint_maker import make_endpoints
+
 app = Flask(__name__)
 
 # !!!VIKTIGT!!!
@@ -25,25 +27,7 @@ def hello_world():
 def header_title():
     return "IRONBOY THINGAMAJIGS"
 
-# för mer inspiration
-# https://github.com/emanueljg/auctionista
 
-@app.route('/api/movies', methods=(['GET']))
-def get_movies():
-    """Get all movies"""
-    query = 'SELECT * FROM movie'
-    with get_conn() as conn, conn.cursor() as cursor:
-        cursor.execute(query)
-        return jsonify(cursor.fetchall())
+make_endpoints(app, get_conn)
 
-@app.route('/api/movies/<id>', methods=(['GET']))
-def get_movie(id):
-    """Get a movie with id `id`."""
-    query = 'SELECT * FROM movie WHERE id = %s'
-    with get_conn() as conn, conn.cursor() as cursor:
-        # the , in (id,) is important in order for the
-        # paranthesis to be interpreted as a tuple and not
-        # operator precedence
-        cursor.execute(query, args=(id,)) 
-        return jsonify(cursor.fetchone())
 
