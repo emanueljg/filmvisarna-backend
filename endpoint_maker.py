@@ -32,13 +32,15 @@ GET_ALL_TEMPLATE = mk_template(
 )
 
 TEMPLATES = [GET_ALL_TEMPLATE]
-TABLES = [ 'movies' ]
+TABLES = [ 'movie' ]
 
 
 def make_endpoints(app, conn_func):
+    conn_name = conn_func.__name__
+    globals()[conn_name] = conn_func
     for table in TABLES:
         for template in TEMPLATES:
-            exec(template.format(table=table, conn_func=conn_func.__name__))
+            exec(template.format(table=table, conn_func=conn_name))
 
 
 #GET_ONE_TEMPLATE = """
