@@ -66,7 +66,7 @@
               
               services.nginx = {
                 enable = true;
-                virtualHosts."filmvisarna-backend.emanueljg.com" = {
+                virtualHosts."emanueljg.com" = {
                   forceSSL = true;
                   enableACME = true;
                   root = cfg.dirPath;
