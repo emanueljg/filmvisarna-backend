@@ -28,6 +28,6 @@ def header_title():
     return "IRONBOY THINGAMAJIGS"
 
 
-make_endpoints(app, get_conn.__name__)
+make_endpoints(app, get_conn)
 
 

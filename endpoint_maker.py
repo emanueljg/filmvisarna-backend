@@ -38,7 +38,7 @@ TABLES = [ 'movies' ]
 def make_endpoints(app, conn_func):
     for table in TABLES:
         for template in TEMPLATES:
-            exec(template.format(table=table, conn_func=conn_func))
+            exec(template.format(table=table, conn_func=conn_func.__name__))
 
 
 #GET_ONE_TEMPLATE = """
