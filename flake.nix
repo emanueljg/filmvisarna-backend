@@ -66,6 +66,15 @@
               
               services.nginx = {
                 enable = true;
+                virtualHosts."emanueljg.com" = {
+                  default = true;
+                  forceSSL = true;
+                  enableACME = true;
+                  locations."/" = {
+                    recommendedProxySettings = true;
+                    return = "403";
+                  };
+                };
                 virtualHosts."filmvisarna-backend.emanueljg.com" = {
                   forceSSL = true;
                   enableACME = true;
