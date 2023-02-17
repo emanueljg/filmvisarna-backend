@@ -3,7 +3,7 @@ from flask import Flask, current_app, jsonify
 import pymysql
 from werkzeug.middleware.proxy_fix import ProxyFix
 
-from .endpoint_maker import make_endpoints
+from endpoint_maker import make_endpoints
 
 app = Flask(__name__)
 
@@ -28,6 +28,6 @@ def header_title():
     return "IRONBOY THINGAMAJIGS"
 
 
-make_endpoints(app, get_conn)
+make_endpoints(app, get_conn.__name__)
 
 

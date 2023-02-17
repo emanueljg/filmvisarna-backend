@@ -9,7 +9,7 @@ def mk_template(use_id, method, fname, query, ret_val):
     route_decorator = f'@app.route("{route}", methods=("{method}",))'
     method_signature = f'def {fname}():'
     context_manager = 'with {conn_func}() as conn, conn.cursor() as cursor:'
-    query = f'query = {query}'
+    query = f'query = "{query}"'
 
     cursor_stub = 'cursor.execute(query'
     cursor = cursor_stub + ')' if not use_id else ', args=(id, ))'
@@ -30,7 +30,6 @@ GET_ALL_TEMPLATE = mk_template(
     False, 'GET', 'get_{table}s',
     'SELECT * FROM {table}', 'cursor.fetchall()'
 )
-print(GET_ALL_TEMPLATE)
 
 TEMPLATES = [GET_ALL_TEMPLATE]
 TABLES = [ 'movies' ]
@@ -51,3 +50,5 @@ def make_endpoints(app, conn_func):
 #            return jsonify(cursor.fetchall())
 #"""
 
+if __name__ == '__main__':
+    print(GET_ALL_TEMPLATE)
