@@ -4,7 +4,7 @@ from flask import jsonify
 
 def mk_template(use_id, method, fname, query, ret_val):
     route_stub = "/api/{table}"
-    route = route_stub if not use_id else rout_stub + "/<id>"
+    route = route_stub + "s" if not use_id else rout_stub + "/<id>"
 
     route_decorator = f'@app.route("{route}", methods=("{method}",))'
     method_signature = f'def {fname}():'
