@@ -6,6 +6,8 @@ from werkzeug.middleware.proxy_fix import ProxyFix
 from endpoint_maker import make_endpoints
 
 app = Flask(__name__)
+app.config['JSON_AS_ASCII'] = False  # fixes åäö not displaying correctly
+
 
 # !!!VIKTIGT!!!
 # kommentera bort detta om flask körs som devserver och ej i produktion
