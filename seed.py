@@ -48,16 +48,16 @@ def mklist(movie, k):
         return []
 
 def doqid(cursor, table, k, v):
-    doq(c, f"SELECT id FROM {table} WHERE {k} = '{v}'") 
+    doq(c, f'SELECT id FROM {table} WHERE {k} = "{v}"') 
     return cursor.fetchone()['id']
 
 def to_args(*args):
-    args = [f"'{arg}'" for arg in args]
+    args = [f'"{arg}"' for arg in args]
     return f" VALUES ({', '.join(args)})"
 
 def quick_xy(movie_id, movie, k, new_k, base_table, xy_table):
     for x in mklist(movie, k):
-        doq(c, f"INSERT INTO {base_table} ({new_k}) VALUES ('{x}')")
+        doq(c, f'INSERT INTO {base_table} ({new_k}) VALUES ("{x}")')
         x_id = doqid(c, base_table, new_k, x)
         args = to_args(movie_id, x_id)
         doq(c, f"INSERT INTO {xy_table} (movie, {base_table})" + args)
@@ -65,13 +65,16 @@ def quick_xy(movie_id, movie, k, new_k, base_table, xy_table):
 # load theatres
 
 
+def enquoted(d, k):
+    return f'"{d[k]}"'
+    
 
 with get_conn() as conn, conn.cursor() as c:
     wipe()
     theatres = load_json('theatres.json')
     for theatre in theatres:
         name = theatre['name']
-        doq(c, f"INSERT INTO theatre (name) VALUES ('{name}')")
+        doq(c, f'INSERT INTO theatre (name) VALUES ("{name}")')
         theatre_id = doqid(c, 'theatre', 'name', name)
         for row_n, seat_row in enumerate(theatre['seatsPerRow'], start=1):
             for col_n in range(1, seat_row + 1):
@@ -81,11 +84,11 @@ with get_conn() as conn, conn.cursor() as c:
     movies = load_json('movies.json')
     for movie in movies:
         movie_args = OrderedDict()  # prep for movie insert
-        movie_args['title'] = f"'{movie['title']}'"
-        movie_args['release_year'] = f"'{movie['release']}'"
-        movie_args['duration'] = f"'{movie['length']}'"
-        movie_args['stars'] = f"'{movie['stars']}'"
-        movie_args['description'] = f"'{movie['description']}'"
+        movie_args['title'] = enquoted(movie, 'title')
+        movie_args['release_year'] = enquoted(movie, 'release')
+        movie_args['duration'] = enquoted(movie, 'length')
+        movie_args['stars'] = enquoted(movie, 'stars')
+        movie_args['description'] = enquoted(movie, 'description')
 
         r = movie['rated']
         doq(c, f"INSERT INTO rating (name) VALUES ('{r}')")
