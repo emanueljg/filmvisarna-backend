@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from flask import Flask, current_app, jsonify
+from flask import Flask, current_app, jsonify, request
 import pymysql
 from werkzeug.middleware.proxy_fix import ProxyFix
 
