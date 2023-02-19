@@ -7,10 +7,8 @@ from endpoint_maker import make_endpoints
 
 app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False  # fixes åäö not displaying correctly
+app.url_map.strict_slashes = False  # /path == /path/
 
-
-# !!!VIKTIGT!!!
-# kommentera bort detta om flask körs som devserver och ej i produktion
 app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_prefix=1)
 
 def get_conn():

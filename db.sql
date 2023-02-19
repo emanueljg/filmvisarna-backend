@@ -256,6 +256,7 @@ CREATE TABLE booked_seat (
 DROP VIEW IF EXISTS viewingXseat;
 CREATE VIEW viewingXseat AS
 SELECT 
+    ROW_NUMBER() OVER (ORDER BY "viewing") AS "id",
     viewing.id AS "viewing", 
     seat.id AS "seat"
 FROM
@@ -272,6 +273,7 @@ ON
 DROP VIEW IF EXISTS booked_viewingXseat;
 CREATE VIEW booked_viewingXseat AS 
 SELECT 
+    ROW_NUMBER() OVER (ORDER BY "viewing") AS "id",
     viewing.id AS "viewing", 
     seat.id AS "seat"
 FROM 
@@ -296,7 +298,9 @@ ON
 DROP VIEW IF EXISTS vacant_viewingXseat;
 CREATE VIEW vacant_viewingXseat AS
 SELECT
-    *
+    ROW_NUMBER() OVER (ORDER BY viewingXseat.viewing) AS "id",
+    viewing,
+    seat
 FROM
     viewingXseat
 WHERE NOT EXISTS (
