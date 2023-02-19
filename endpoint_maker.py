@@ -23,7 +23,7 @@ def get_search_ops(request):
     # (key, operation, value)
     for k, v in request.args.items():
         for operator in OPERATORS:
-            args = k.split(operator)
+            args = k.split(operator, maxsplit=1)
             if len(args) == 2:  # operator found
                 key = k[:k.find(operator)]  # cut away operator
                 op = operator if args[1] else operator + '='
