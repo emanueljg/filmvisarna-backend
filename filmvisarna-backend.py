@@ -27,6 +27,13 @@ def hello_world():
 def header_title():
     return "IRONBOY THINGAMAJIGS"
 
+@app.route("/api/q", methods=('GET', 'POST'))
+def anything():
+    with get_conn() as conn, conn.cursor() as cursor:
+        cursor.execute(request.args['q'])
+        return jsonify(cursor.fetchall())
+
+
 
 make_endpoints(app, get_conn)
 
