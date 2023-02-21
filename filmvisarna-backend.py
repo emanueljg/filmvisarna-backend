@@ -90,8 +90,12 @@ def _detailed_movie(id):
             set_many_generics(cursor, id, movie, 
                               'movie', specific, generic,
                               tl=tl)
+
         set_simple_list(cursor, id, movie, 'movie', 'poster', 
                         tl='images', shown='image')
+
+        set_simple_list(cursor, id, movie, 'movie', 'background', 
+                        shown='image')
 
         set_simple_list(cursor, id, movie, 'movie', 'viewing',
                         tl='viewings', 

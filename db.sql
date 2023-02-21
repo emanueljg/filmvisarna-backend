@@ -185,6 +185,17 @@ CREATE TABLE poster (
     UNIQUE(movie, image)
 );
 
+DROP TABLE IF EXISTS background;
+CREATE TABLE background (
+    id int NOT NULL AUTO_INCREMENT KEY,
+    movie int NOT NULL,
+    image varchar(200) NOT NULL,
+
+    FOREIGN KEY (movie) REFERENCES movie(id),
+
+    UNIQUE(movie, image)
+);
+
 -- VIEWING STUFF STARTS HERE --
 DROP TABLE IF EXISTS theatre;
 CREATE TABLE theatre (
