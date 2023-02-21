@@ -97,6 +97,9 @@ def _detailed_movie(id):
         set_simple_list(cursor, id, movie, 'movie', 'background', 
                         shown='image')
 
+        set_simple_list(cursor, id, movie, 'movie', 'trailer', 
+                        tl='trailer', shown='video')
+
         set_simple_list(cursor, id, movie, 'movie', 'viewing',
                         tl='viewings', 
                         shown='theatre, ' \

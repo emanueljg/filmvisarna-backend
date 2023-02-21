@@ -111,6 +111,10 @@ with get_conn() as conn, conn.cursor() as c:
             args = to_args(movie_id, image)
             doq(c, f"INSERT INTO background (movie, image)" + args)
 
+        for trailer in movie['trailer']:
+            args = to_args(movie_id, trailer)
+            doq(c, f"INSERT INTO trailer (movie, video)" + args)
+
         quick_xy(movie_id, movie, 'productionCountries', 
                  'name', 'country', 'production_country')
         quick_xy(movie_id, movie, 'genre',

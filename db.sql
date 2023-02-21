@@ -196,6 +196,17 @@ CREATE TABLE background (
     UNIQUE(movie, image)
 );
 
+DROP TABLE IF EXISTS trailer;
+CREATE TABLE trailer (
+    id int NOT NULL AUTO_INCREMENT KEY,
+    movie int NOT NULL,
+    video varchar(20) NOT NULL,
+
+    FOREIGN KEY (movie) REFERENCES movie(id),
+
+    UNIQUE(movie, video)
+);
+
 -- VIEWING STUFF STARTS HERE --
 DROP TABLE IF EXISTS theatre;
 CREATE TABLE theatre (
