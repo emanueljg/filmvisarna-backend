@@ -58,8 +58,8 @@ def set_many_generics(cursor, id, tbl, tbl_name,
 def datef(col):
     return f"DATE_FORMAT({col}, '%%Y-%%m-%%dT%%H:%%i')"
 
-@app.route("/api/movies/<id>/details", methods=('GET',))
-def movie_details(id):
+
+def _detailed_movie(id):
     with get_conn() as conn, conn.cursor() as cursor:
         # GET MOVIES FIRST
         cursor.execute('SELECT ' \
@@ -102,6 +102,16 @@ def movie_details(id):
 
         return movie
 
+@app.route("/api/detailed_movies/<id>", methods=('GET',))
+def detailed_movie(id):
+    return jsonify(_detailed_movie(id))
+
+@app.route("/api/detailed_movies", methods=('GET',))
+def detailed_movies():
+    with get_conn() as conn, conn.cursor() as cursor:
+        cursor.execute('SELECT id FROM movie')
+        ids = [result['id'] for result in cursor.fetchall()]
+        return jsonify([_detailed_movie(id) for id in ids])
 
 make_endpoints(app, get_conn)
 
