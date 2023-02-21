@@ -71,6 +71,8 @@ def enquoted(d, k):
 
 with get_conn() as conn, conn.cursor() as c:
     wipe()
+    c.execute("SET SESSION time_zone = '+01:00'")
+    c.execute("SET SESSION lc_time_names = 'sv_SE'")
     theatres = load_json('theatres.json')
     for theatre in theatres:
         name = theatre['name']
