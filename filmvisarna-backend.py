@@ -34,14 +34,15 @@ def anything():
         return jsonify(cursor.fetchall())
 
 # REAL ROUTES START HERE
-def collect_from_attr(cursor, d, attr, new_attr, tl=None):
-    d[tl or new_attr] = [item[attr] for item in cursor.fetchall()]
+def collect_from_attr(cursor, d, attr, new_attr, tl=None, flatten=True):
+    d[tl or new_attr] = [item[attr] if flatten else item 
+                         for item in cursor.fetchall()]
 
 def set_simple_list(cursor, id, src, src_name, tgt, 
-                    tl=None, shown='name'):
+                    tl=None, shown='name', flatten=True):
     cursor.execute(f'SELECT {shown} FROM {tgt} ' \
                    f'WHERE {tgt}.{src_name} = %s', args=(id,))
-    collect_from_attr(cursor, src, shown, tgt, tl=tl)
+    collect_from_attr(cursor, src, shown, tgt, tl=tl, flatten=flatten)
 
 def set_many_generics(cursor, id, tbl, tbl_name, 
                       specific, generic, tl=None, shown='name'): 
@@ -52,7 +53,6 @@ def set_many_generics(cursor, id, tbl, tbl_name,
                    f'INNER JOIN {generic} ON {generic}.id = {specific}.{generic} ' \
                    f'WHERE {specific}.{tbl_name} = %s', args=(id,))
     collect_from_attr(cursor, tbl, shown, specific, tl=tl)
-
 
 @app.route("/api/movies/<id>/details", methods=('GET',))
 def movie_details(id):
@@ -88,6 +88,10 @@ def movie_details(id):
                               tl=tl)
         set_simple_list(cursor, id, movie, 'movie', 'poster', 
                         tl='images', shown='image')
+
+        set_simple_list(cursor, id, movie, 'movie', 'viewing',
+                        tl='viewings', shown='theatre, starts, ends',
+                        flatten=False)
 
         return movie
 
