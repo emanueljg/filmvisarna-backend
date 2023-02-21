@@ -54,6 +54,10 @@ def set_many_generics(cursor, id, tbl, tbl_name,
                    f'WHERE {specific}.{tbl_name} = %s', args=(id,))
     collect_from_attr(cursor, tbl, shown, specific, tl=tl)
 
+
+def datef(col):
+    return f"DATE_FORMAT({col}, '%%Y-%%m-%%dT%%H:%%i')"
+
 @app.route("/api/movies/<id>/details", methods=('GET',))
 def movie_details(id):
     with get_conn() as conn, conn.cursor() as cursor:
@@ -90,7 +94,10 @@ def movie_details(id):
                         tl='images', shown='image')
 
         set_simple_list(cursor, id, movie, 'movie', 'viewing',
-                        tl='viewings', shown='theatre, starts, ends',
+                        tl='viewings', 
+                        shown='theatre, ' \
+                              f'{datef("starts")} as start_date, ' \
+                              f'{datef("ends")} as end_date',
                         flatten=False)
 
         return movie
