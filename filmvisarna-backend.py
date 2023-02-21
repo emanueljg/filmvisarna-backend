@@ -37,8 +37,11 @@ def anything():
 def collect_from_attr(cursor, d, attr, new_attr, tl=None):
     d[tl or new_attr] = [item[attr] for item in cursor.fetchall()]
 
-def set_simple_list(cursor, id, tbl, tbl_nae):
-    cursor.execute('SELECT poster.path FROM 
+def set_simple_list(cursor, id, src, src_name, tgt, 
+                    tl=None, shown='name'):
+    cursor.execute(f'SELECT {shown} FROM {tgt} ' \
+                   f'WHERE {tgt}.{src_name} = %s', args=(id,))
+    collect_from_attr(cursor, src, shown, tgt, tl=tl)
 
 def set_many_generics(cursor, id, tbl, tbl_name, 
                       specific, generic, tl=None, shown='name'): 
@@ -79,11 +82,12 @@ def movie_details(id):
             # genre
             ('genre', 'movie_genre', 'genre')
         )
-
         for tl, specific, generic in many_args:
             set_many_generics(cursor, id, movie, 
                               'movie', specific, generic,
                               tl=tl)
+        set_simple_list(cursor, id, movie, 'movie', 'poster', 
+                        tl='images', shown='image')
 
         return movie
 
