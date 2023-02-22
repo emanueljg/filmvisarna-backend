@@ -100,7 +100,9 @@ POST_TEMPLATE = r"""
             query = 'INSERT INTO {table} ({columns:csv})' \
                     ' VALUES ({columns:f-csv})'
             cursor.execute(query, args=params)
-            return 200
+            pong_query = 'SELECT LAST_INSERT_ID() as last_id'
+            cursor.execute(pong_query)
+            return jsonify(cursor.fetchone())
 """
 
 PUT_TEMPLATE = """
@@ -109,13 +111,15 @@ PUT_TEMPLATE = """
         keys = []
         vals = []
         # assure order 
-        for k, v in request.json().items():
+        for k, v in request.json.items():
             keys.append(k)
             vals.append(v)
         set_str = ', '.join(f'{{k}} = %s' for k in keys)
         with {conn_func}() as conn, conn.cursor() as cursor:
             query = f'UPDATE {table} SET {{set_str}} WHERE id = %s'
             cursor.execute(query, args=(vals+[id]))
+            cursor.execute(f'SELECT * FROM {table} WHERE id = %s', args=(id,))
+            return jsonify(cursor.fetchone())
 """
 
 DELETE_TEMPLATE = """
@@ -123,7 +127,8 @@ DELETE_TEMPLATE = """
     def delete_{table}(id):
         with {conn_func}() as conn, conn.cursor() as cursor:
             query = 'DELETE FROM {table} WHERE id = %s'
-            cursor.execute(query, args=(id, ))
+            cursor.execute(query, args=(id,))
+            return jsonify('ok')
 """
 
 # https://devop22.lms.nodehill.se/article/ett-exempel-pa-en-fardig-cinema-databas-och-ett-flexibelt-rest-api
