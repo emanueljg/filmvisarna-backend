@@ -118,7 +118,7 @@ def detailed_movies():
     with get_conn() as conn, conn.cursor() as cursor:
         cursor.execute('SELECT id FROM movie')
         ids = [result['id'] for result in cursor.fetchall()]
-        return jsonify([_detailed_movie(id) for id in ids])
+        return jsonify(sorted([_detailed_movie(id) for id in ids], key=lambda k: k['title']))
 
 make_endpoints(app, get_conn)
 
