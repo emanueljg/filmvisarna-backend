@@ -3,7 +3,7 @@ A backend written in flask + mysql
 
 ## Usage from official hosted backend:
 
-1. Make sure the frontend's vite config points it /api route
+1. Make sure the frontend's vite config points its `/api` route
    toward `https://filmvisarna-backend.emanueljg.com`
 
 ## Local usage
@@ -24,5 +24,5 @@ pip install pymysql flask
    accordance with your database setup.
 3. Seed database: `python3 seed.py`
 4. Run backend: `flask --app 'filmvisarna-backend.py' run`
-5. Make sure the frontend's vite config points it /api route
+5. Make sure the frontend's vite config points its `/api` route
    toward the local backend server.
