@@ -3,8 +3,9 @@ A backend written in flask + mysql
 
 ## Usage from official hosted backend:
 
-1. Make sure the frontend's vite config points its `/api` route
-   toward `https://filmvisarna-backend.emanueljg.com`
+Frontend should be configured to point to it out-of-the-box, but if not:
+Make sure the frontend's vite config points its `/api` route toward 
+`https://filmvisarna-backend.emanueljg.com`.
 
 ## Local usage
 
